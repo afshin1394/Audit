@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/medium_dark_blue"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.main.fragment.AuditMainFragment">
+   <androidx.recyclerview.widget.RecyclerView
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+       style="@style/tv_title_style"
+       android:textColor="@color/colorPrimary"
+       android:id="@+id/rv_region"/>
+   <FrameLayout
+       android:background="@drawable/ios_background"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       android:id="@+id/imageSlider"
+       android:layout_width="match_parent"
+       app:layout_constraintHeight_percent="0.5"
+       android:layout_height="0dp"
+       />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

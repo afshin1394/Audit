@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.audit.activity.AuditActivity">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.irancell.nwg.ios.data.model.DialogModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/dialog_background"
+        android:backgroundTint="@color/black"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/lin_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/top_round_shape">
+            <!--    <ImageView-->
+            <!--        android:id="@+id/img_close"-->
+            <!--        android:layout_width="@dimen/_20sdp"-->
+            <!--        android:layout_height="@dimen/_20sdp"-->
+            <!--        android:layout_marginStart="@dimen/_6sdp"-->
+            <!--        android:layout_marginTop="@dimen/_6sdp"-->
+            <!--        android:layout_marginEnd="@dimen/_6sdp"-->
+            <!--        android:layout_marginBottom="@dimen/_6sdp"-->
+            <!--        android:background="@drawable/ic_close"-->
+            <!--        android:padding="@dimen/_25sdp" />-->
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_2sdp"
+                android:src="@drawable/ic_question_mark"
+                android:id="@+id/lottie_animation"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                app:lottie_autoPlay="true"
+                app:lottie_rawRes="@raw/question_mark" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_weight="12"
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:gravity="center"
+
+            >
+
+            <TextView
+                style="@style/tv_element_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_12sdp"
+                android:text="@{data.title}"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lin_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="6"
+            android:background="@drawable/bottom_round_corner"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_actiontwo"
+                cardColor="@{data.SecondActionColor}"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:elevation="@dimen/_20sdp"
+                android:padding="@dimen/_8sdp"
+                app:cardBackgroundColor="@color/light_gray"
+                app:cardCornerRadius="@dimen/_20sdp">
+
+                <TextView
+                    android:id="@+id/txt_action_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@{data.secondAction}"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_actionOne"
+                cardColor="@{data.firstActionColor}"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_12sdp"
+                android:layout_weight="1"
+                android:elevation="@dimen/_20sdp"
+                app:cardBackgroundColor="@color/light_gray"
+                app:cardCornerRadius="@dimen/_20sdp">
+
+                <TextView
+                    android:id="@+id/txt_action_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@{data.firstAction}"
+                    android:textAlignment="gravity"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13ssp" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

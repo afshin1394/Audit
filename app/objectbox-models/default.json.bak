@@ -1,0 +1,276 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7343615653093017415",
+      "lastPropertyId": "4:4478089996209180046",
+      "name": "ObjectBoxRegion",
+      "properties": [
+        {
+          "id": "1:432087263824330358",
+          "name": "regionId",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5941176125480497814",
+          "name": "regionCode",
+          "type": 9
+        },
+        {
+          "id": "3:1244987181469077271",
+          "name": "regionName",
+          "type": 9
+        },
+        {
+          "id": "4:4478089996209180046",
+          "name": "regionVendor",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:8636502709189259764",
+          "name": "objectBoxSite",
+          "targetId": "2:1260448019138277484"
+        }
+      ]
+    },
+    {
+      "id": "2:1260448019138277484",
+      "lastPropertyId": "7:6559583361172516098",
+      "name": "ObjectBoxSite",
+      "properties": [
+        {
+          "id": "1:72863627857183328",
+          "name": "siteId",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5060745024529906894",
+          "name": "siteCode",
+          "type": 9
+        },
+        {
+          "id": "3:4224889815296334054",
+          "name": "siteName",
+          "type": 9
+        },
+        {
+          "id": "4:4034899372695619317",
+          "name": "locationName",
+          "type": 9
+        },
+        {
+          "id": "5:2326118236832149708",
+          "name": "state",
+          "type": 6
+        },
+        {
+          "id": "6:8848174080787497147",
+          "name": "regionId",
+          "type": 6
+        },
+        {
+          "id": "7:6559583361172516098",
+          "name": "objectBoxSiteId",
+          "indexId": "1:1407860000820477468",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "ObjectBoxRegion"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:7130271741723622209",
+      "lastPropertyId": "8:6914185890452528740",
+      "name": "ObjectBoxProfile",
+      "properties": [
+        {
+          "id": "1:7648661911788382181",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8058317604216214520",
+          "name": "first_name",
+          "type": 9
+        },
+        {
+          "id": "3:1971414166962615051",
+          "name": "last_name",
+          "type": 9
+        },
+        {
+          "id": "4:6821339734136532114",
+          "name": "company",
+          "type": 9
+        },
+        {
+          "id": "5:9097276519248579659",
+          "name": "organization",
+          "type": 9
+        },
+        {
+          "id": "6:5659030320749884304",
+          "name": "national_id",
+          "type": 9
+        },
+        {
+          "id": "7:5849582524560710037",
+          "name": "phone_number",
+          "type": 9
+        },
+        {
+          "id": "8:6914185890452528740",
+          "name": "objectboxUserId",
+          "indexId": "2:6893871423744710163",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "ObjectBoxUser"
+        }
+      ],
+      "relations": [
+        {
+          "id": "2:2576298564568910010",
+          "name": "objectBoxRole",
+          "targetId": "4:163503556071786888"
+        }
+      ]
+    },
+    {
+      "id": "4:163503556071786888",
+      "lastPropertyId": "3:8429503704493283043",
+      "name": "ObjectBoxRole",
+      "properties": [
+        {
+          "id": "1:8378230725452489910",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2216930155580287010",
+          "name": "code",
+          "type": 6
+        },
+        {
+          "id": "3:8429503704493283043",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "3:3013270322410666626",
+          "name": "objectboxProfile",
+          "targetId": "3:7130271741723622209"
+        }
+      ]
+    },
+    {
+      "id": "5:7558885360869332798",
+      "lastPropertyId": "5:2280469849695630503",
+      "name": "ObjectBoxUser",
+      "properties": [
+        {
+          "id": "1:6155671934088856659",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1492387886468554077",
+          "name": "pk",
+          "type": 9
+        },
+        {
+          "id": "3:4918636414055515672",
+          "name": "username",
+          "type": 9
+        },
+        {
+          "id": "4:1639641036657854047",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "5:2280469849695630503",
+          "name": "objectBoxProfileId",
+          "indexId": "3:3804020953747551767",
+          "type": 11,
+          "flags": 520,
+          "relationTarget": "ObjectBoxProfile"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:865884010028721624",
+      "lastPropertyId": "9:8134639693476236297",
+      "name": "ObjectBoxAttributes",
+      "properties": [
+        {
+          "id": "1:5718914994287720859",
+          "name": "attrId",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5678974054833304694",
+          "name": "siteId",
+          "type": 6
+        },
+        {
+          "id": "3:3984692007752852453",
+          "name": "parentGroupId",
+          "type": 6
+        },
+        {
+          "id": "4:4128448567258379364",
+          "name": "groupId",
+          "type": 6
+        },
+        {
+          "id": "6:926939929741361283",
+          "name": "type",
+          "type": 6
+        },
+        {
+          "id": "7:3034789043736989649",
+          "name": "json",
+          "type": 9
+        },
+        {
+          "id": "8:21261752819962503",
+          "name": "persianName",
+          "type": 9
+        },
+        {
+          "id": "9:8134639693476236297",
+          "name": "englishName",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "6:865884010028721624",
+  "lastIndexId": "3:3804020953747551767",
+  "lastRelationId": "3:3013270322410666626",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    4088556305740466416
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

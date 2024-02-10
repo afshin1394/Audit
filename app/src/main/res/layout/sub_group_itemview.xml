@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.audit.activity.AuditActivity">
+
+    <data>
+        <variable
+            name="data"
+            type="com.irancell.nwg.ios.data.remote.response.audit.SubGroup" />
+        <variable
+            name="adapter"
+            type="com.irancell.nwg.ios.presentation.audit.adapter.AttrElementAdapter" />
+
+        <variable
+            name="local"
+            type="String" />
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/lin_itemChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_marginLeft="@dimen/_4sdp"
+        android:layout_marginRight="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/card_subtitle"
+            android:layout_width="match_parent"
+            android:elevation="@dimen/_1sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/up_rounded_gradiant"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/_2sdp">
+
+            <TextView
+                android:id="@+id/TV_filter_title"
+                style="@style/tv_title_style"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/fullblack"
+                android:layout_weight="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_2sdp"
+                local ="@{local}"
+                textLocal="@{data.name}" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV_elements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:background="#654d2c   "
+            android:layoutDirection="ltr"
+             />
+
+    </LinearLayout>
+
+</layout>

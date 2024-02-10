@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="element"
+            type="com.irancell.nwg.ios.data.remote.response.audit.AttrElement" />
+        <variable
+            name="local"
+            type="String" />
+
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.google.android.material.textview.MaterialTextView
+        mandatory="@{element.mandatory}"
+        textLocal="@{element.name}"
+        local="@{local}"
+        android:textColor="@color/black"
+        android:background="@drawable/top_round_shape"
+        style="@style/tv_element_style"
+        android:textStyle="normal"
+        android:textAlignment="center"
+        android:textSize="@dimen/_11ssp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/primary_border"
+        android:orientation="horizontal">
+
+
+
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:elevation="@dimen/_9sdp">
+
+<!--                <TextView-->
+<!--                    android:text="@string/latitudeSemicolon"-->
+<!--                    style="@style/tv_element_style"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginStart="@dimen/_9sdp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textColorHint="@color/white" />-->
+
+                <EditText
+                    latitude="@{element}"
+                    android:id="@+id/etv_latitude"
+                    style="@style/tv_element_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:gravity="start"
+                    android:soundEffectsEnabled="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#97B1B1B1"
+                    android:textCursorDrawable="@drawable/cursor_shape"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="2"
+
+                android:layout_margin="@dimen/_6sdp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_background"
+                android:elevation="@dimen/_9sdp">
+
+<!--                <TextView-->
+<!--                    android:text="@string/longitudeSemicolon"-->
+<!--                    style="@style/tv_element_style"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_marginStart="@dimen/_9sdp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:textColorHint="@color/white" />-->
+
+                <EditText
+                    longitude="@{element}"
+                    android:id="@+id/etv_longitude"
+                    style="@style/tv_element_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:gravity="start"
+                    android:soundEffectsEnabled="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="#97B1B1B1"
+                    android:textCursorDrawable="@drawable/cursor_shape"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+            </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_weight="1"
+
+            android:id="@+id/img_get_location"
+            style="@style/custom_button_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:text="@string/auto"
+            android:textSize="@dimen/_6sdp"
+            app:icon="@drawable/ic_target_location"
+            app:iconGravity="top" />
+    </LinearLayout>
+    </LinearLayout>
+    </layout>

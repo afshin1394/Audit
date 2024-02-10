@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IOS</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="sendConfirmCode">ارسال</string>
+    <string name="confirm">تایید</string>
+
+
+    //menu options
+    <string name="action_audit">آدیت</string>
+    <string name="action_report">گزارش</string>
+    <string name="action_settings">تنظیمات</string>
+    <string name="action_share">اشتراک گذاری</string>
+    <string name="action_exit">خروج</string>
+
+    <string name="yes">بله</string>
+    <string name="no">خیر</string>
+    <string name="exit">خروج</string>
+    <string name="imageAvailable" >"در حال حاضر عکسی موجود است,چه اقدامی را در پیش میگیرید؟"</string>
+    <string name="retry" >"تلاش مجدد"</string>
+    <string name="preview" >"نمایش"</string>
+    <string name="delete">حذف</string>
+    <string name="language">زبان:</string>
+    <string name="persian">فارسی</string>
+    <string name="english">انگلیسی</string>
+    <string name="regions">منطقه ها</string>
+    <string name="dismiss">بستن</string>
+    <string name="latitude">طول جغرافیایی</string>
+    <string name="longitude">عرض جغرافیایی</string>
+    <string name="date">تاریخ</string>
+    <string name="exitAudit">آیا مایل به خروج از فرایند حسابرسی این سایت هستید؟</string>
+    <string name="scanner_not_supported">اسکنر بارکد در این دستگاه پشتیبانی نمی شود</string>
+    <string name="BarcodeContent">محتوای بارکد</string>
+    <string name="irancell_password">رمز عبور ایرانسلی</string>
+    <string name="irancell_username">نام کاربری ایرانسلی</string>
+    <string name="verification_code">کد تایید</string>
+    <string name="resend_code">ارسال مجدد</string>
+    <string name="resend_code_number">کد مجددا به خط ایرانسلی شما ارسال شد</string>
+    <string name="action_logout">خروج از حساب کاربری</string>
+    <string name="action_dashboard">داشبورد</string>
+    <string name="location">مکان جغرافیایی</string>
+    <string name="site_address">آدرس سایت</string>
+    <string name="site_status">وضعیت سایت</string>
+    <string name="site_code">کد سایت</string>
+    <string name="site_name">نام سایت</string>
+    <string name="email">ایمیل:</string>
+    <string name="search_in_web">جستجو در وب</string>
+    <string name="save_modification">آیا مایل به ذخیره تغییرات هستید؟</string>
+    <string name="save">ذخیره</string>
+    <string name="back">بازگشت</string>
+    <string name="auto">اتوماتیک</string>
+    <string name="longitudeSemicolon">طول جغرافیایی:</string>
+    <string name="latitudeSemicolon">عرض جغرافیایی:</string>
+    <string name="problematic">مشکل دار</string>
+    <string name="password">رمز عبور:</string>
+    <string name="action_profile">پروفایل</string>
+    <string name="name">نام</string>
+    <string name="identityCode">کدملی</string>
+    <string name="phone">تلفن</string>
+    <string name="company">شرکت</string>
+    <string name="organization">سازمان</string>
+    <string name="role">سمت</string>
+    <string name="Scheduled">جدید</string>
+    <string name="InProgress">در حال انجام</string>
+    <string name="Visited">بازدید شده</string>
+    <string name="Problematic">مشکل دار</string>
+    <string name="action_home">خانه</string>
+    <string name="EntranceImpossible">با عرض پوزش!قادر به اجرای برنامه نیستیم.لطفا با پشتیبانی تماس بگیرید. </string>
+    <string name="UnderDev">در حال توسعه می باشد!</string>
+    <string name="auditSiteStates">وضعیت سایت ها</string>
+    <string name="upload">ارسال</string>
+    <string name="clear">پاک کردن</string>
+    <string name="networkCheck">لطفا اتصال شبکه خود را بررسی کنید</string>
+    <string name="uploading">در حال ارسال..</string>
+    <string name="networkError">لطفا دسترسی به اینترنت خود را چک کنید!</string>
+    <string name="successUpload">ارسال اطلاعات با موفقیت انجام شد!</string>
+    <string name="successSave">اطلاعات با موفقیت ذخیره شد!</string>
+    <string name="Audit">حسابرسی</string>
+    <string name="UnScheduled">برنامه ریزی نشده</string>
+    <string name="Confirmed">تایید شده</string>
+    <string name="Rejected">رد شده</string>
+    <string name="all">همه</string>
+    <string name="installation_type">نوع نصب سایت</string>
+    <string name="technologies">فن آوری ها</string>
+    <string name="please_wait">لطفا صبر کنید…</string>
+    <string name="high">بالا</string>
+    <string name="medium">متوسط</string>
+    <string name="low">پایین</string>
+    <string name="imageQuality">کیفیت تصویر</string>
+    <string name="upload_modification">آیا مایل به ارسال اطلاعات هستید؟(لطفا قبل از ارسال از اتصال به اینترنت مطمئن شوید.)</string>
+    <string name="ReUploadImpossible">"اطلاعات شما قبلا ارسال شده است"</string>
+    <string name="please_complete_following">لطفا اطلاعات زیر را تکمیل نمایید</string>
+    <string name="irancell_optimization_system">سیستم بهینه سازی ایرانسل</string>
+    <string name="version">نسخه:</string>
+    <string name="unableToGetProfileDetails">در حال حاضر اطلاعات کاربر قابل دریافت نیست</string>
+    <string name="gps_signal_lost">لطفااز روشن بودن موقعیت مکانی اطمینان حاصل کنید</string>
+    <string name="file_saved">فایل با موفقیت ذخیره شد!</string>
+    <string name="Reported">بازبینی</string>
+    <string name="routing">مسیریابی</string>
+
+
+    //stitcher
+    <string name="stitch_mode_scans">اسکن ها</string>
+    <string name="stitch_mode_panorama">پاناروما</string>
+    <string name="pick_images_button">انتخاب عکس ها</string>
+    <string name="processing_images">آماده سازی عکس ها</string>
+    <string name="map_app_not_installed">هیچ برنامه مناسبی بر روی دستگاه شما نصب نیست</string>
+
+</resources>

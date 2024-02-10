@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="option"
+            type="com.irancell.nwg.ios.data.remote.response.audit.Option" />
+    </data>
+<LinearLayout
+    android:background="@android:color/transparent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"/>
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/tv_value"
+        android:text="@{option.name}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/tv_element_style"
+        android:textSize="@dimen/_12sdp"
+        />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"/>
+</LinearLayout>
+</layout>

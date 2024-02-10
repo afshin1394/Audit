@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+
+
+        <variable
+            name="data"
+            type="com.irancell.nwg.ios.data.remote.response.audit.Option" />
+
+    </data>
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/checkbox_choice"
+        style="@style/tv_element_style"
+        android:textColor="@color/white"
+        android:checked="@{data.value == 1?true:false}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorPrimary"
+        android:text="@{data.name}" />
+
+</layout>

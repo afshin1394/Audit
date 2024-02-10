@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.audit.activity.AuditActivity">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.irancell.nwg.ios.data.remote.response.audit.AttrElement" />
+
+
+        <variable
+            name="adapter"
+            type="com.irancell.nwg.ios.presentation.audit.adapter.AttrElementAdapter" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/lin_itemChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_margin="@dimen/_4sdp"
+        android:layoutDirection="rtl"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/lin_filter_title"
+            android:layout_width="match_parent"
+            android:elevation="@dimen/_1sdp"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/sub_group_item_background"
+            android:orientation="horizontal"
+            android:padding="@dimen/_2sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="-10dp"
+                android:paddingTop="@dimen/_20sdp"
+                android:id="@+id/RV_groups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:background="#837037"
+                android:layoutDirection="ltr"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</layout>

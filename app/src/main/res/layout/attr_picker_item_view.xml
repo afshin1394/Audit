@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="data"
+            type="com.irancell.nwg.ios.data.remote.response.audit.AttrElement" />
+        <variable
+            name="option"
+            type="com.irancell.nwg.ios.data.remote.response.audit.Option" />
+        <variable
+            name="local"
+            type="String" />
+    </data>
+
+
+<LinearLayout
+    android:layout_marginTop="@dimen/_12sdp"
+    android:layout_marginBottom="@dimen/_12sdp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:elevation="@dimen/_30sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:layoutDirection="ltr"
+        android:gravity="center"
+        >
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/top_round_shape"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_picker_title"
+                mandatory="@{data.mandatory}"
+                local="@{local}"
+                textLocal="@{data.name}"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                style="@style/tv_element_style"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/frm_camera"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:background="@drawable/bottom_round_corner"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_picker_value"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                style="@style/tv_element_style"
+                android:textStyle="normal"
+                android:textSize="@dimen/_12ssp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_picker"
+                android:clipToPadding="false"
+                android:paddingLeft="183dp"
+                android:paddingRight="183dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+</layout>

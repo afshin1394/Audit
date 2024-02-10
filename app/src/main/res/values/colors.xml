@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="transparentBlack">#3B000000</color>
+    <color name="black">#FF000000</color>
+    <color name="fullblack">#000000</color>
+    <color name="green">#4CAF50</color>
+    <color name="orange">#DB4A1D</color>
+    <color name="red">#EF1515</color>
+    <color name="white">#E4F5F4F4</color>
+    <color name="light_gray">#D3D3D3</color>
+
+
+
+    <color name="transparentWhite">#33FFFFFF</color>
+    <color name="transparentWhiteSecond">#4AFFFFFF</color>
+
+    <color name="color_tertiary">#554C3B</color>
+    <color name="colorPrimary">#FFBE00</color>
+    <color name="hint">#C3FFBE00</color>
+    <color name="colorPrimaryTransparent">#5BFFBE00</color>
+    <color name="frameBackground">#4DFFBE00</color>
+    <color name="locationColor">#36D8F4</color>
+    <color name="VanDykeBrown">#654d2c</color>
+    <color name="CadetBlue">#a2bec9</color>
+    <color name="MossGreen">#9aa163</color>
+    <color name="dark_blue">#000D19</color>
+    <color name="medium_dark_blue">#1a2946</color>
+    <color name="strong_light_blue">#17356E</color>
+    <color name="light_blue">#5686D6</color>
+    <color name="dark_gray">#3E3E3E</color>
+
+    <color name="light_gray_site">#BA000B41</color>
+
+
+    <color name="Scheduled">#2c4c99</color>
+    <color name="InProgress">#D68524</color>
+    <color name="Visited">#238060</color>
+    <color name="Problematic">#C5122D</color>
+    <color name="Reported">#9512C5</color>
+    Moss Green
+    #9aa163
+
+</resources>

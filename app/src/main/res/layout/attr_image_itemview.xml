@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.audit.activity.AuditActivity">
+    <data>
+
+        <variable
+            name="data"
+            type="com.irancell.nwg.ios.data.remote.response.audit.AttrElement" />
+        <variable
+            name="local"
+            type="String" />
+
+    </data>
+<LinearLayout
+    android:elevation="@dimen/_30sdp"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="wrap_content">
+    <LinearLayout
+
+        android:background="@drawable/top_round_shape"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+
+        android:gravity="center"
+        style="@style/tv_element_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/fullblack"
+        mandatory="@{data.mandatory}"
+        textLocal="@{data.name}"
+        local="@{local}"
+        />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/frm_camera"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:background="@drawable/itembox_background"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/img_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:padding="@dimen/_8sdp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/img_camera"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:src="@drawable/ic_camera"
+        />
+    </FrameLayout>
+
+</LinearLayout>
+</LinearLayout>
+</layout>
+

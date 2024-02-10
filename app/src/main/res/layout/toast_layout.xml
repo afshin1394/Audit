@@ -1,0 +1,26 @@
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_primary"
+        android:backgroundTint="@color/dark_gray"
+        android:padding="@dimen/_8sdp"
+        android:layout_margin="@dimen/_18sdp"
+        android:layout_gravity="center|bottom"
+        >
+        <TextView
+            android:id="@+id/txt_limit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textDirection="rtl"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/networkError"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+

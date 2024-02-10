@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    app:startDestination="@id/homeMainFragment">
+
+    <fragment
+        android:id="@+id/auditMainFragment"
+        android:name="com.irancell.nwg.ios.presentation.main.fragment.AuditMainFragment"
+        android:label="fragment_audit_main"
+        tools:layout="@layout/fragment_audit_main" />
+    <fragment
+        android:id="@+id/settingMainFragment"
+        android:name="com.irancell.nwg.ios.presentation.main.fragment.SettingMainFragment"
+        android:label="fragment_setting_main"
+        tools:layout="@layout/fragment_setting_main" />
+    <fragment
+        android:id="@+id/siteFragment"
+        android:name="com.irancell.nwg.ios.presentation.main.fragment.SiteFragment"
+        android:label="fragment_site"
+        tools:layout="@layout/fragment_site" />
+    <fragment
+        android:id="@+id/reportMainFragment"
+        android:name="com.irancell.nwg.ios.presentation.main.fragment.DashboardMainFragment"
+        android:label="fragment_report_main"
+        tools:layout="@layout/fragment_dashboard_main" />
+    <fragment
+        android:id="@+id/profileMainFragment"
+        android:name="com.irancell.nwg.ios.presentation.main.fragment.ProfileMainFragment"
+        android:label="fragment_profile_main"
+        tools:layout="@layout/fragment_profile_main" />
+    <fragment
+        android:id="@+id/homeMainFragment"
+        android:name="com.irancell.nwg.ios.presentation.main.fragment.HomeMainFragment"
+        android:label="fragment_home_main"
+        tools:layout="@layout/fragment_home_main" />
+
+</navigation>
+

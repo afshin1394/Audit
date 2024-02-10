@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ShapeAppearanceOverlay.App.CornerSize10Percent" parent="">
+        <item name="cornerSize">15%</item>
+    </style>
+
+    <style name="customTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+
+    <style name="tv_title_style">
+<!--        <item name="android:fontFamily">@font/irancell_bold</item>-->
+        <item name="android:textColor">#DAFFFFFF</item>
+        <item name="android:layout_margin">@dimen/_2sdp</item>
+        <item name="android:padding">@dimen/_2sdp</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tv_element_style">
+<!--        <item name="android:fontFamily">@font/irancell_light</item>-->
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_margin">@dimen/_2sdp</item>
+        <item name="android:padding">@dimen/_2sdp</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="tv_detail_style">
+        <!--        <item name="android:fontFamily">@font/irancell_light</item>-->
+        <item name="android:textColor">#A8F5F4F4</item>
+        <item name="android:layout_margin">@dimen/_2sdp</item>
+        <item name="android:padding">@dimen/_2sdp</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+
+
+
+    <style name="tv_setting_style">
+        <!--        <item name="android:fontFamily">@font/irancell_bold</item>-->
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_margin">@dimen/_2sdp</item>
+        <item name="android:padding">@dimen/_2sdp</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+
+    </style>
+
+
+    <style name="tv_profile_style">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:padding">@dimen/_4sdp</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+
+
+
+    <style name="custom_button_icon" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="iconTint">@color/colorPrimary</item>
+    </style>
+    <style name="custom_button_icon_white" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="custom_button_icon_image" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="iconTint">@color/colorPrimary</item>
+        <item name= "android:textSize">@dimen/_9sdp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+
+    <style name="switch_style" parent="android:Widget.CompoundButton">
+            <item name="android:colorControlActivated">#148E13</item>
+    </style>
+
+    <style name="disableMultiTouch">
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+
+    <style name="MyDialogTheme" parent="android:Theme.NoTitleBar.Fullscreen">
+        <!-- Fill the screen -->
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:layout_gravity">center</item>
+
+        <!-- Just to prove it's working -->
+        <item name="android:background">@color/colorPrimaryTransparent</item>
+
+        <item name="windowActionModeOverlay">true</item>
+
+    </style>
+
+
+    <style name="custom_navigationDrawer_style" parent="Widget.Design.ScrimInsetsFrameLayout">
+        <item name="elevation">@dimen/design_navigation_elevation</item>
+        <item name="itemIconPadding">@dimen/design_navigation_item_icon_padding</item>
+        <item name="itemHorizontalPadding">@dimen/design_navigation_item_horizontal_padding</item>
+        <item name="android:background">@color/medium_dark_blue</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:maxWidth">@dimen/design_navigation_max_width</item>
+        <item name="subheaderInsetStart">?attr/listPreferredItemPaddingLeft</item>
+        <item name="subheaderInsetEnd">?attr/listPreferredItemPaddingRight</item>
+        <item name="drawerLayoutCornerSize">0dp</item>
+    </style>
+
+    <style name="myFullscreenAlertDialogStyle" parent="Theme.AppCompat.Light.NoActionBar">      //no actionbar, but status bar exists
+        <item name="android:windowFullscreen">true</item>                       //remove status bar
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>        //smooth animation
+    </style>
+
+    <style name="custom_toolbar" parent="Base.V7.Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/TextAppearance.Widget.AppCompat.Toolbar.Title</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+        <item name="titleMargin">4dp</item>
+        <item name="maxButtonHeight">@dimen/abc_action_bar_default_height_material</item>
+        <item name="buttonGravity">top</item>
+        <item name="collapseIcon">?attr/homeAsUpIndicator</item>
+        <item name="collapseContentDescription">@string/abc_toolbar_collapse_description</item>
+        <item name="contentInsetStart">4dp</item>
+        <item name="contentInsetStartWithNavigation">@dimen/abc_action_bar_content_inset_with_nav</item>
+        <item name="android:paddingLeft">@dimen/abc_action_bar_default_padding_start_material</item>
+        <item name="android:paddingStart">@dimen/abc_action_bar_default_padding_start_material</item>
+        <item name="android:paddingRight">@dimen/abc_action_bar_default_padding_end_material</item>
+        <item name="android:paddingEnd">@dimen/abc_action_bar_default_padding_end_material</item>
+    </style>
+
+</resources>

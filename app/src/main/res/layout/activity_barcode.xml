@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentation.barcode.BarcodeActivity">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="20">
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+<LinearLayout
+    android:orientation="horizontal"
+    android:gravity="bottom"
+    android:layout_gravity="bottom"
+    android:layout_margin="@dimen/_4sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/confirm"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_gravity="center"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/confirm" />
+    <TextView
+        android:layout_weight="7"
+        android:id="@+id/barcode_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Barcode Text"
+        android:textSize="25sp"
+        android:padding="5dp"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/reject"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:layout_width="@dimen/_36sdp"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_gravity="center"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/reject" />
+</LinearLayout>
+</FrameLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:visibility="gone"
+        android:id="@+id/search_in_web"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_margin="@dimen/_26sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:gravity="center"
+
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/black" />
+
+            <TextView
+                android:gravity="center"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_in_web"
+                style="@style/tv_title_style"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

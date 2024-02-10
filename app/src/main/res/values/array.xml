@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="siteStateColors">
+    <item>@color/Scheduled</item>
+    <item>@color/InProgress</item>
+    <item>@color/Visited</item>
+    <item>@color/Problematic</item>
+</string-array>
+</resources>

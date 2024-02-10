@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@color/orange"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/tv_date_time"
+        android:text="Date: 2/15/2023"
+        style="@style/tv_detail_style"
+
+        android:gravity="center"
+        android:layout_weight="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/tv_location"
+        android:layout_weight="5"
+        style="@style/tv_detail_style"
+        android:text="lat:29.6261456\tlon:52.4827192"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

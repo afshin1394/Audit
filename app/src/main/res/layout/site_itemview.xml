@@ -1,0 +1,297 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable
+            name="data"
+            type="com.irancell.nwg.ios.data.model.SiteDomain" />
+
+        <variable
+            name="local"
+            type="String" />
+    </data>
+
+<LinearLayout
+    android:id="@+id/lin_root"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:background="@color/fullblack"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<FrameLayout
+    android:elevation="@dimen/_2sdp"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/deep_view"
+    android:backgroundTint="@color/colorPrimary"
+    android:orientation="vertical">
+    <FrameLayout
+        android:elevation="@dimen/_4sdp"
+        android:id="@+id/frm_site"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/lin_filter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/up_rounded_gradiant"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="@dimen/_2sdp">
+    <RelativeLayout
+        android:elevation="@dimen/_2sdp"
+        android:padding="@dimen/_4sdp"
+        android:id="@+id/rel_title"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:gravity="center"
+                android:id="@+id/iv_audit_icon"
+                android:textColor="@color/fullblack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/arrow_down"
+                android:src="@drawable/ic_antenna"
+                android:tint="@color/fullblack"
+                />
+        <TextView
+            android:paddingTop="@dimen/_10sdp"
+            android:id="@+id/tv_siteCode"
+            style="@style/tv_title_style"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/fullblack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            siteTitle ="@{data}"
+             />
+        </LinearLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_expand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            rotationOnOpen="@{data.open}"
+            android:src="@drawable/arrow_down"
+            android:textColor="@color/fullblack"
+            android:tint="@color/fullblack"
+            app:icon="@drawable/arrow_down" />
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@id/iv_expand"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/round_status_stamp_background"
+
+            >
+            <TextView
+                android:textAlignment="center"
+                status="@{data.audit_status}"
+                style="@style/tv_detail_style"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingRight="@dimen/_4sdp"
+                android:paddingLeft="@dimen/_4sdp"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</FrameLayout>
+  <LinearLayout
+      visibilityOnOpen = "@{data.open}"
+      android:id="@+id/lin_expandable"
+      android:layout_marginTop="-10dp"
+      android:layout_marginLeft="@dimen/_5sdp"
+      android:layout_marginRight="@dimen/_5sdp"
+      android:background="@color/white"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:id="@+id/lbl_site_id"
+            android:text="@string/technologies"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/fullblack"
+            style="@style/tv_element_style"/>
+
+        <TextView
+            android:id="@+id/tv_site_id"
+            style="@style/tv_element_style"
+            local_gravity="@{local}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@{data.technologies.trim()}"
+            android:textColor="@color/fullblack" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lbl_site_name"
+            style="@style/tv_element_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/installation_type"
+            android:textColor="@color/fullblack" />
+
+        <TextView
+            android:id="@+id/tv_site_name"
+            android:text="@{data.site_installation_type.trim()}"
+            local_gravity="@{local}"
+            android:textColor="@color/fullblack"
+            style="@style/tv_detail_style"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lbl_site_location"
+            android:text="@string/location"
+            style="@style/tv_element_style"
+            android:textColor="@color/fullblack"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/fullblack"
+            android:id="@+id/tv_site_location"
+            android:text="@{data.province}"
+            local_gravity="@{local}"
+            style="@style/tv_detail_style"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/lbl_site_state"
+            android:text="@string/site_status"
+            style="@style/tv_element_style"
+            android:textColor="@color/fullblack"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_site_state"
+            android:layout_weight="1"
+            status="@{data.audit_status}"
+            style="@style/tv_detail_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+      <LinearLayout
+
+          android:layout_gravity="start"
+          android:gravity="center"
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <com.google.android.material.button.MaterialButton
+              style="@style/Widget.AppCompat.Button.Colored"
+              android:background="@drawable/deep_view"
+              android:layout_margin="@dimen/_4sdp"
+              android:layout_weight="1"
+              app:iconGravity="textStart"
+              android:text="@string/routing"
+              android:textSize="@dimen/_9sdp"
+              android:gravity="center"
+              android:textStyle="bold"
+              android:id="@+id/btn_routing"
+              android:textColor="@color/fullblack"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/_2sdp"
+              app:icon="@drawable/ic_direction"
+              />
+          <com.google.android.material.button.MaterialButton
+              style="@style/Widget.AppCompat.Button.Colored"
+              android:background="@drawable/deep_view"
+              android:layout_margin="@dimen/_4sdp"
+              app:iconGravity="textStart"
+              android:textSize="@dimen/_9sdp"
+              android:textStyle="bold"
+              android:gravity="center"
+              android:id="@+id/btn_audit"
+              android:textColor="@color/fullblack"
+              android:layout_weight="1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/_2sdp"
+              android:text="@string/action_audit"
+              app:icon="@drawable/ic_audit"
+              />
+
+          <com.google.android.material.button.MaterialButton
+              style="@style/Widget.AppCompat.Button.Colored"
+              android:background="@drawable/deep_view"
+              android:layout_margin="@dimen/_4sdp"
+              android:layout_weight="1"
+              app:iconGravity="textStart"
+              android:text="@string/problematic"
+              android:textSize="@dimen/_9sdp"
+              android:gravity="center"
+              android:textStyle="bold"
+              android:id="@+id/btn_problematic"
+              android:textColor="@color/fullblack"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/_2sdp"
+              app:icon="@drawable/ic_problem"
+              />
+      </LinearLayout>
+  </LinearLayout>
+</LinearLayout>
+</layout>

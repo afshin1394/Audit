@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="viewModelAudit"
+            type="com.irancell.nwg.ios.presentation.audit.viewModel.AuditViewModel" />
+    </data>
+<LinearLayout
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appbarlayout"
+        >
+        <LinearLayout
+
+            style="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            >
+                <LinearLayout
+                    android:background="@drawable/ios_background"
+
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:orientation="vertical">
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <com.google.android.material.button.MaterialButton
+                            app:iconGravity="top"
+                            android:textSize="@dimen/_8sdp"
+                            android:text="@string/back"
+                            app:icon="@drawable/ic_back"
+                            style="@style/custom_button_icon"
+                            android:id="@+id/IV_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                             />
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                style="@style/tv_title_style"
+                                android:textColor="@color/colorPrimary"
+                                android:text="@string/Audit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txt_title"/>
+
+                            <LinearLayout
+
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+
+                                    style="@style/tv_element_style"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/txt_region"/>
+                                <TextView
+
+                                    style="@style/tv_element_style"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/txt_site_name"/>
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    style="@style/tv_detail_style"
+                                    android:textColor="@color/colorPrimary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/txt_details"/>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/custom_button_icon"
+                            app:icon="@drawable/ic_upload"
+                            app:iconGravity="top"
+                            android:textSize="@dimen/_8sdp"
+                            android:text="@string/upload"
+                            android:id="@+id/IV_upload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toStartOf="@id/IV_save"
+
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:src="@drawable/ic_upload" />
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/custom_button_icon"
+                            app:icon="@drawable/ic_save"
+                            app:iconGravity="top"
+                            android:textSize="@dimen/_8sdp"
+                            android:text="@string/save"
+                            android:id="@+id/IV_save"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginEnd="@dimen/_6sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:src="@drawable/ic_save" />
+                    </RelativeLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:visibility="visible"
+        android:layout_weight="12"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    <com.google.android.material.tabs.TabLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="1"
+        android:id="@+id/tabLayout"
+        app:tabTextAppearance="@style/customTabText"
+        app:tabTextColor="@color/color_tertiary"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorGravity="top"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+</LinearLayout>
+
+</layout>

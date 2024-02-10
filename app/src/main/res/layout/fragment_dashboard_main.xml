@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.main.fragment.DashboardMainFragment">
+
+    <WebView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/tv_title_style"
+        android:textColor="@color/colorPrimary"
+        android:id="@+id/web_grafana"/>
+
+</FrameLayout>

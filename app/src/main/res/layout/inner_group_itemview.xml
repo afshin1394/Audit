@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.audit.activity.AuditActivity">
+
+    <data>
+        <variable
+            name="data"
+            type="com.irancell.nwg.ios.data.remote.response.audit.Group" />
+        <variable
+            name="local"
+            type="String" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        direction="@{local}"
+        android:elevation="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_margin="@dimen/_2sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/lin_itemChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/lin_filter_title"
+            android:layout_width="match_parent"
+            android:elevation="@dimen/_1sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/sub_group_item_background"
+            android:orientation="horizontal"
+            android:padding="@dimen/_2sdp">
+
+            <TextView
+                android:textColor="@color/fullblack"
+                android:id="@+id/TV_filter_title"
+                style="@style/tv_element_style"
+                android:layout_gravity="center"
+                android:layout_weight="10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="jjnk"
+                android:padding="@dimen/_2sdp"
+                textLocal="@{data.name}"
+                local="@{local}"
+                />
+            <ImageView
+                local_rotation="@{local}"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/enter"
+                app:tint="@color/fullblack" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>

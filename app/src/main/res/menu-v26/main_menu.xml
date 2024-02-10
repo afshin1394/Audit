@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.MainActivity"
+
+    >
+    <item
+        android:icon="@drawable/ic_home"
+        android:id="@+id/action_home"
+        android:orderInCategory="1"
+        android:title="@string/action_home"
+        app:showAsAction="never"
+        />
+
+
+    <item
+        android:icon="@drawable/ic_audit"
+        android:id="@+id/action_audit"
+        android:orderInCategory="2"
+        android:title="@string/action_audit"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:icon="@drawable/ic_dashboard"
+        android:id="@+id/action_dashboard"
+        android:orderInCategory="3"
+        android:title="@string/action_dashboard"
+        app:showAsAction="never"/>
+    <item
+        android:icon="@drawable/ic_profile"
+        android:id="@+id/action_profile"
+        android:orderInCategory="4"
+        android:title="@string/action_profile"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:icon="@drawable/ic_share"
+        android:id="@+id/action_share"
+        android:orderInCategory="5"
+        android:title="@string/action_share"
+        app:showAsAction="never"/>
+    <item
+        android:icon="@drawable/ic_setting"
+        android:id="@+id/action_settings"
+        android:orderInCategory="6"
+        android:title="@string/action_settings"
+        app:showAsAction="never"
+        />
+    <item
+        android:icon="@drawable/ic_logout"
+        android:id="@+id/action_logout"
+        android:orderInCategory="7"
+        android:title="@string/action_logout"
+        app:showAsAction="never"/>
+
+    <item
+        android:icon="@drawable/ic_exit"
+        android:id="@+id/action_exit"
+        android:orderInCategory="8"
+        android:title="@string/action_exit"
+        app:showAsAction="never"/>
+
+</menu>

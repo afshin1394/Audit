@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/sendOtpFragment"
+    android:id="@+id/login">
+
+    <fragment
+        android:id="@+id/sendOtpFragment"
+        android:name="com.irancell.nwg.ios.presentation.login.sendotp.SendOtpFragment"
+        android:label="fragment_send_otp"
+        tools:layout ="@layout/fragment_send_otp" >
+        <action
+            android:id="@+id/action_sendOtpFragment_to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOtpFragment"
+        android:name="com.irancell.nwg.ios.presentation.login.verifyotp.VerifyOtpFragment"
+        android:label="fragment_verify_otp"
+        tools:layout="@layout/fragment_verify_otp" />
+
+</navigation>

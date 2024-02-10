@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.audit.activity.AuditActivity">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.irancell.nwg.ios.data.remote.response.audit.AttrElement" />
+        <variable
+            name="local"
+            type="String" />
+    </data>
+
+
+    <LinearLayout
+        direction="@{local}"
+        android:id="@+id/lin_comment"
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/edit_text_background"
+        android:elevation="@dimen/_9sdp">
+
+        <TextView
+            style="@style/tv_element_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_9sdp"
+            mandatory="@{data.mandatory}"
+            local="@{local}"
+            semicolonHint="@{data.name}"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+           />
+
+        <EditText
+            android:id="@+id/etv_comment"
+            style="@style/tv_element_style"
+            inputText="@{data}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorPrimary"
+            android:soundEffectsEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#97B1B1B1"
+            android:textCursorDrawable="@drawable/cursor_shape"
+             />
+    </LinearLayout>
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        app:hintTextColor="@color/fullblack"-->
+    <!--        android:id="@+id/filledTextField"-->
+    <!--        app:boxStrokeColor="@color/fullblack"-->
+    <!--        android:textColor="@color/fullblack"-->
+    <!--        android:textColorHint="@color/fullblack"-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--        android:layout_marginTop="@dimen/_8sdp"-->
+    <!--        android:textCursorDrawable="@null"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        >-->
+
+    <!--        &lt;!&ndash;this is the actual edit text which takes the input&ndash;&gt;-->
+    <!--      -->
+    <!--        <com.google.android.material.textfield.TextInputEditText-->
+    <!--            android:textColor="@color/fullblack"-->
+    <!--            android:layout_marginLeft="@dimen/_6sdp"-->
+    <!--            android:layout_marginRight="@dimen/_6sdp"-->
+    <!--            android:layout_marginBottom="@dimen/_6sdp"-->
+    <!--            android:id="@+id/etv_comment"-->
+    <!--            inputText = "@{data}"-->
+    <!--            android:textCursorDrawable="@null"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content" />-->
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
+</layout>

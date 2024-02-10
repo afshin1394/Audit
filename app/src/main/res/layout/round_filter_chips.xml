@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/lin_chips"
+    android:background="@drawable/round_corner_primary"
+    android:backgroundTint="@color/white"
+    android:gravity="center"
+    android:layout_margin="@dimen/_8sdp"
+    android:layout_width="@dimen/_80sdp"
+    android:layout_height="@dimen/_30sdp">
+    <TextView
+        android:id="@+id/tv_chips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Scheduled"
+        android:textColor="@color/fullblack"
+        style="@style/tv_element_style"
+        android:textAlignment="center"/>
+
+</LinearLayout>

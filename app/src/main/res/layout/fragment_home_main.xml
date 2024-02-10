@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/medium_dark_blue"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.main.fragment.HomeMainFragment"
+    tools:ignore="MissingDefaultResource">
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_half_vertical"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:elevation="@dimen/_20sdp"
+            app:layout_constraintHeight="match_parent"
+            android:id="@+id/piechart_sitestates"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    <FrameLayout
+        android:background="@drawable/ios_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/imageSlider"
+        android:layout_width="match_parent"
+        app:layout_constraintHeight_percent="0.5"
+        android:layout_height="0dp"
+      />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
